@@ -41,11 +41,11 @@
          <div class="container">
             <div class="product-image">
                <div class="minify">
-                  <img src="http://via.placeholder.com/80x80" id="carrousel1" alt="">
-                  <img src="http://via.placeholder.com/80x80" id="carrousel2" alt="">
-                  <img src="http://via.placeholder.com/80x80" id="carrousel3" alt="">
+                  <img src="http://via.placeholder.com/80x80" id="carrousel0" onclick="products.setMainImage(this.src)" alt="">
+                  <img src="http://via.placeholder.com/80x80" id="carrousel1" onclick="products.setMainImage(this.src)" alt="">
+                  <img src="http://via.placeholder.com/80x80" id="carrousel2" onclick="products.setMainImage(this.src)" alt="">
                </div>
-               <img src="http://via.placeholder.com/400x600" class="product" alt="">
+               <img src="http://via.placeholder.com/400x600" id="carrouselMain" width=400 height=400 class="product" alt="">
                <div class="datos">
                   <div class="options">                  
                      <h2 class="produc-name">
@@ -55,7 +55,7 @@
                         $3.199
                      </p>
                      <h3>Frigorías</h3>
-                     <select class="category-product">
+                     <select class="category-product" onchange="products.select(this.value)">
                      <option selected>Elegir opcion...</option>
                      </select>
 
@@ -100,27 +100,27 @@
          <div class="upsell">
             <div class="row">            
                <div class="col-md-4">
+                <img src="" alt="..." id="upsell0">
+                <div class="caption">
+                  <h3 id="title0"></h3>
+                  <p id="description0"></p>
+                  <button class="contract">contratar</button>
+                </div>
+               </div>
+               <div class="col-md-4">
                 <img src="" alt="..." id="upsell1">
                 <div class="caption">
-                  <h3 id="title">Instalación de AA</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat quidem at in iure unde consequatur cum facilis quia optio. Tempora, quaerat? Odio reiciendis totam quaerat iure, facilis adipisci unde pariatur?</p>
-                   <button class="contract">contratar</button>
+                  <h3 id="title1"></h3>
+                  <p id="description1"></p>
+                  <button class="contract">contratar</button>
                 </div>
                </div>
                <div class="col-md-4">
                 <img src="" alt="..." id="upsell2">
                 <div class="caption">
-                  <h3 id="title">Instalación de AA</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis quis suscipit unde quasi asperiores laboriosam eos, beatae ad at, quidem optio consequuntur, quia eveniet sed quam veniam labore tempore aperiam.</p>
-                   <button class="contract">contratar</button>
-                </div>
-               </div>
-               <div class="col-md-4">
-                <img src="" alt="..." id="upsell3">
-                <div class="caption">
-                  <h3 id="title">Instalación de AA</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam ex ipsam libero, aut vero earum laudantium tempore, ipsa deleniti aspernatur ea! Impedit blanditiis repudiandae ab minima! Ad ipsa fugiat debitis.</p>
-                   <button class="contract">contratar</button>
+                  <h3 id="title2"></h3>
+                  <p id="description2"></p>
+                  <button class="contract">contratar</button>
                 </div>
                </div>
             </div>

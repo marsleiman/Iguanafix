@@ -13,26 +13,31 @@ function ProductsPage() {
 			data.forEach(function(d){
 				categoryProducts.append('<option value=' + d.id + ((d.id == defaultProduct) ? ' selected' : '') + '>' + d.description + '</option>');
 			});
-
 		});
 	}
 	this.select = function(productId){
-		this.images(this.defaultProduct);
+		this.images(productId);
+	}
+	this.setMainImage = function(src){
+		$('#carrouselMain').attr("src",src);
 	}
 	this.images = function(productId){
+		var me = this;
 		$.get(this.url + "product/" + productId +'/photos', function(data){
-			console.log(data);
-			$('#carrousel' + 1).attr("src",data[0].url);
-			$('#carrousel' + 2).attr("src",data[1].url);
-			$('#carrousel' + 3).attr("src",data[2].url);
+			me.setMainImage(data[0].url);
+			data.forEach(function(el, index){
+				$('#carrousel' + index).attr("src",el.url);
+			})
 		});	
 	}
 	this.related = function(){
 		$.get(this.url + "related-product/list", function(data){
 			console.log(data);
-			$('#upsell' + 1).attr("src",data[0].pictureUrl,"h3",data[0].title);
-			$('#upsell' + 2).attr("src",data[1].pictureUrl,"h3",data[0].title);
-			$('#upsell' + 3).attr("src",data[2].pictureUrl,"h3",data[0].title);
+			data.forEach(function(el, index){
+				$('#upsell' + index).attr("src",el.pictureUrl);
+				$("#title" + index).append(el.title);
+				$("#description" + index).append(el.description);
+			});
 		});
 	}
 }
@@ -42,3 +47,4 @@ products.init();
 
 
 
+//append a columnas de bootstrap con una funcion que me devuelva el array concatenado
