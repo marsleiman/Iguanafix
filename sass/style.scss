@@ -29,6 +29,33 @@ header{
 					color: #fff;
 					padding: 0 10px;
 					font-size: .8em;
+					&:hover{
+						color: rgba(53, 81, 173, 0.93);
+						background: #fff;
+						text-decoration: none;
+						padding: 20px 10px;
+					}
+				}
+			}
+			#desplegable{
+				ul{
+					display: none;
+				}
+				.menu-desplegado{
+					display: block;
+					position: absolute;
+					top: 45px;
+					right: 40px;
+					li{
+						display: block;
+						a{
+							color: rgba(53, 81, 173, 0.93);
+							&:hover{
+								color: rgba(53, 81, 173, 0.93);
+								background: none;
+							}
+						}
+					}
 				}
 			}	
 		}
@@ -191,6 +218,12 @@ footer{
 			font-size: 1.1em;
 			font-weight: 500;
 			margin: 0 10px;
+			a{
+				color: #b3b3b3;
+				&:hover{
+					color: #fff;
+				}
+			}
 		}
 	}
 	h4{

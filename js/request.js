@@ -44,7 +44,3 @@ function ProductsPage() {
 
 var products = new ProductsPage();
 products.init();
-
-
-
-//append a columnas de bootstrap con una funcion que me devuelva el array concatenado

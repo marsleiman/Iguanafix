@@ -24,6 +24,25 @@ header {
           color: #fff;
           padding: 0 10px;
           font-size: .8em; }
+          header nav.nav-iguanafix ul li a:hover {
+            color: rgba(53, 81, 173, 0.93);
+            background: #fff;
+            text-decoration: none;
+            padding: 20px 10px; }
+      header nav.nav-iguanafix ul #desplegable ul {
+        display: none; }
+      header nav.nav-iguanafix ul #desplegable .menu-desplegado {
+        display: block;
+        position: absolute;
+        top: 45px;
+        right: 40px; }
+        header nav.nav-iguanafix ul #desplegable .menu-desplegado li {
+          display: block; }
+          header nav.nav-iguanafix ul #desplegable .menu-desplegado li a {
+            color: rgba(53, 81, 173, 0.93); }
+            header nav.nav-iguanafix ul #desplegable .menu-desplegado li a:hover {
+              color: rgba(53, 81, 173, 0.93);
+              background: none; }
 
 nav ol.breadcrumb {
   padding-left: 0;
@@ -153,6 +172,10 @@ footer {
       font-size: 1.1em;
       font-weight: 500;
       margin: 0 10px; }
+      footer .logo ul li a {
+        color: #b3b3b3; }
+        footer .logo ul li a:hover {
+          color: #fff; }
   footer h4 {
     color: #fff;
     font-size: 14px;

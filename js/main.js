@@ -53,5 +53,8 @@ $(document).ready(function(){
         $(event.target).closest(row).html('');
     });
 
-    
+    $("li#desplegable").click(function(){
+        $("li#desplegable ul").toggleClass('menu-desplegado');
+    });
+
 });
