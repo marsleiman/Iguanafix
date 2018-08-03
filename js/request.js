@@ -8,10 +8,12 @@ function ProductsPage() {
 	}
 	this.load = function(defaultProduct){
 		$.get(this.url + "product/list", function(data){
-			var categoryProducts = $('.category-product');
+			let productName = $('.product-name');
+			let categoryProducts = $('.category-product');
 			console.log(data);
 			data.forEach(function(d){
 				categoryProducts.append('<option value=' + d.id + ((d.id == defaultProduct) ? ' selected' : '') + '>' + d.description + '</option>');
+				productName.text(d.id);
 			});
 		});
 	}

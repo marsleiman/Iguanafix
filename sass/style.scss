@@ -1,3 +1,5 @@
+$break-small: 768px;
+
 header{
 	background-color: rgba(53, 81, 173, 0.93);
 	padding: 10px 15px;
@@ -85,8 +87,9 @@ section#product-view{
 		}
 		.minify{
 			flex-direction: column;
-			margin-right: 15px;
+			margin-right: 25px;
 			img{
+				cursor: pointer;
 				width: 80px;
 				height: 80px;
 			    display: block;
@@ -292,6 +295,39 @@ footer{
 		    display: flex;
 		    justify-content: space-between;
 		    align-items: center;
+		}
+	}
+}
+
+@media screen and (max-width: $break-small){
+	section#product-view .product-image{
+		flex-direction: column;
+		#carrouselMain{
+			order: -1;
+			width: 90%;
+			margin: 0 auto;
+			height: auto;
+		}
+		.minify{
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			margin: 0 auto;
+			margin-top: 20px;
+			width: 90%;
+		}
+		.datos{
+			.options{
+				display: flex;
+				flex-wrap: wrap;
+				align-items: center;
+				.product-name{
+					margin: 0;
+				}
+				.price{
+					margin: 0;
+				}
+			}
 		}
 	}
 }
