@@ -77,10 +77,11 @@ section#product-view {
     flex-direction: column;
     justify-content: space-between;
     border-bottom: 1px solid #b3b3b3; }
-    section#product-view .datos .price {
+    section#product-view .datos .price, section#product-view .datos .pesos {
       color: #fa4183;
       font-weight: 700;
-      font-size: 1.8em; }
+      font-size: 1.8em;
+      display: inline-block; }
     section#product-view .datos .category-product {
       width: 90%;
       padding: 6px 3px;

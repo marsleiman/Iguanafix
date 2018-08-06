@@ -9,11 +9,14 @@ function ProductsPage() {
 	this.load = function(defaultProduct){
 		$.get(this.url + "product/list", function(data){
 			let productName = $('.product-name');
+			let productPrice = $('.price');
 			let categoryProducts = $('.category-product');
 			console.log(data);
 			data.forEach(function(d){
 				categoryProducts.append('<option value=' + d.id + ((d.id == defaultProduct) ? ' selected' : '') + '>' + d.description + '</option>');
+				productPrice.text(d.unitPriceInCents);
 				productName.text(d.id);
+
 			});
 		});
 	}
@@ -27,6 +30,7 @@ function ProductsPage() {
 		var me = this;
 		$.get(this.url + "product/" + productId +'/photos', function(data){
 			me.setMainImage(data[0].url);
+			console.log(productId);
 			data.forEach(function(el, index){
 				$('#carrousel' + index).attr("src",el.url);
 			})
